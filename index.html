@@ -17,7 +17,7 @@
     </head>
     <body>
       <div style="width:25em; margin:auto; font-family:arial, serif;">
-        <h2>Litecoin Payment</h2>
+        <h2>Beyondcoin Payment</h2>
         <p id="status"></p>
         <p id="error"></p>
         <h3>Amount: <span id="amount"></span></h3>
@@ -78,7 +78,7 @@ if (id) {
 	}
 	$("#payreq").text(request);
 	$("#reason").text(data.message);
-        $("#amount").text(data.amount_LTC + " LTC");
+        $("#amount").text(data.amount_BYND + " BYND");
         $("#paylink").attr("href", URI);
         $("<p />").text("Powered by Electrum").appendTo($("p#powered"));
         $(function () {
@@ -138,7 +138,7 @@ if (id) {
 };
 
 // See http://stackoverflow.com/questions/29186154/chrome-clicking-mailto-links-closes-websocket-connection
-$(document).on('click', 'a[href^="litecoin:"]', function (e) {
+$(document).on('click', 'a[href^="beyondcoin:"]', function (e) {
     e.preventDefault();
     var btcWindow = window.open($(e.currentTarget).attr('href'));
     btcWindow.close();
